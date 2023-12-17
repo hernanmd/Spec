@@ -138,6 +138,11 @@ SpDemo >> initializePresenters [
 					name: 'Browse presenter';
 					icon: (self iconNamed: #smallHelp);
 					action: [ list selectedItem new pageClass browse ] ];
+			addItem: [ : item |
+				item
+					name: 'Clone presenter';
+					icon: (self iconNamed: #smallCopy);
+					action: [ list selectedItem cloneDemo ] ]
 			yourself).
 
 	self focusOrder
