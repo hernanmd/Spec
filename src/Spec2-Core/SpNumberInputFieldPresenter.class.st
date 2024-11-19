@@ -227,7 +227,8 @@ SpNumberInputFieldPresenter >> whenNumberChangedDo: aBlock [
 	 - old value
 	 - the announcement triggering this action"
 
-	self whenTextChangedDo: [ :newValue :oldValue | aBlock cull: self number cull: newValue ]
+	self whenTextChangedDo: [ :newValue :oldValue | aBlock cull: oldValue cull: newValue ]
+
 ]
 
 { #category : 'api - events' }
